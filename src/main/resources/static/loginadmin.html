@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* First Row */
+        .header {
+            flex: 1;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Second Row (Login Box) */
+        .login-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:darkgray;
+        }
+
+        .login-box {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        /* Style for the login form elements */
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: darkgray;
+            color: #fff;
+            cursor: pointer;
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Style for "gym" */
+        .white-text {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Row (Logo) -->
+    <div class="header">
+        <img src="assets/images/cta-bg.jpg" alt="Company Logo" width="100%" height="500">
+     
+    </div>
+
+    <!-- Second Row (Login Box) -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2 class="white-text">Login</h2>
+            <form action="/login" method="post">
+                <input type="text" name="userid" placeholder="User ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

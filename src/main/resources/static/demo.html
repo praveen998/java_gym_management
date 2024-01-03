@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request Example</title>
+</head>
+<body>
+    <button id="getDataButton">Get Data</button>
+    <p id="resultParagraph"></p>
+
+    <script>
+        document.getElementById('getDataButton').addEventListener('click', fetchD);
+        function fetchD()
+        {
+            fetchData(1);
+        }
+
+        function fetchData(i) {
+            // Define the URL of your Spring Boot API endpoint
+
+
+            fetch("/dashboard")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse the response as text
+                    return response.text();
+                })
+                .then(data => {
+                    // Split the string by commas
+                    const parts = data.split(',');
+
+                    // Create a new paragraph element to display each part
+                    const resultParagraph = document.getElementById('resultParagraph');
+                    resultParagraph.innerHTML = i; // Clear previous content
+                })
+              
+        }
+    </script>
+</body>
+</html>

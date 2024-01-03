@@ -1,0 +1,48 @@
+
+/* Container for the two columns */
+.container {
+    display: flex;
+}
+
+/* Style for the first column (menu) */
+.menu-column {
+    flex: 1;
+    width: 20%;
+    background-color:lightgray;
+    padding: 20px;
+  
+}
+
+/* Style for the second column (content) */
+.content-column {
+    flex: 4;
+    width: 80%;
+    background-color:white;
+    padding: 20px;
+}   
+
+/* Style for the logo */
+.logo {
+    text-align: center;
+}
+
+/* Style for menu items */
+.menu-item {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+/* Style for selected menu item */
+.menu-item.active {
+    font-weight: bold;
+}
+
+/* Style for content */
+.content {
+    display: none;
+}
+
+/* Show content when menu item is active */
+.menu-item.active + .content {
+    display: block;
+}

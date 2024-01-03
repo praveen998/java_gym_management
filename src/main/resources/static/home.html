@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Column Layout</title>
+     <link rel="stylesheet" type="text/css" href="./assets/css/home.css">
+     <link rel="stylesheet" type="text/css" href="./assets/css/darshboard.css">
+     <link rel="stylesheet" href="assets/css/newregister.css">
+     <style>
+     .container table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .container th, .container td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+</style>
+</head>
+<body>
+    <div style="background-color: #333; color: white; text-align: center; padding: 10px;">
+        <h1>Title Bar</h1>
+    </div>
+
+    <div class="container">
+        <!-- First Column (Menu) -->
+        <div class="menu-column">
+            <div class="logo">
+                <img src="assets/images/features-first-icon.png" alt="Logo" width="80">
+            </div>
+            <div class="menu-item" onclick="showContent(1)">Dashboard</div>
+            <div class="menu-item" onclick="showContent(2)">New Registration</div>
+            <div class="menu-item" onclick="showContent(3)">Payment</div>
+            <div class="menu-item" onclick="showContent(4)">Members</div>
+            <div class="menu-item" onclick="showContent(5)">Health Status</div>
+            <div class="menu-item" onclick="showContent(6)">Plan</div>
+            <div class="menu-item" onclick="showContent(7)">Overview</div>
+            <div class="menu-item" onclick="showContent(8)">Exercise Routine</div>
+            <div class="menu-item" onclick="showContent(9)">Profile</div>
+            <div class="menu-item" onclick="logout()">Logout</div>
+            <!-- Add more menu items as needed -->
+        </div>
+
+        <!-- Second Column (Content) -->
+        <div class="content-column" >
+            <div class="content" id="content1">
+               
+                <div class="container">
+                    <div class="box">
+                        <b>Paid Income This Month</b>
+                        <h1 id="content11"></h1>
+                        
+                    </div>
+                    <div class="box">
+                        <b>Total Members</b><br><br><br>
+                        <h1 id="content12"></h1>
+                    </div>
+                    <div class="box">
+                        <b>Joined This Month</b>
+                        <h1 id="content13"></h1>
+                    </div>
+                    <div class="box">
+                        <b>Total Plan Available</b>
+                        <h1 id="content14"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content2">
+                <!-- content 2--------------------------------------------------------------->
+
+                    <div style="background-color: #ccc;">
+                    <h2 style="text-align: center;">New Registration</h2>
+                    </div>
+                    <div class="bodi">
+                       
+                        <div class="container_new"> 
+                            <form action="/new_registration" method="post">
+                            
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="streetname">streetname:</label>
+                                    <input type="text" id="streetname" name="streetname" placeholder="Enter your streetname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">city:</label>
+                                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">state:</label>
+                                    <input type="text" id="state" name="state" placeholder="Enter your city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipcode">zipcode:</label>
+                                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter your zipcode" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth:</label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Select Gender:</label>
+                                    <select id="gender" name="gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="doj">Joining Date:</label>
+                                    <input type="date" id="doj" name="doj" required>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <button type="submit" style="background-color: #737678;">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="content" id="content3">
+                
+                  <!-- container3------------------------------------- -->
+  
+    <!-- First Row with Text -->
+    <div style="padding: 20px;">
+        <p>This is the first row with text.</p>
+    </div>
+
+    <!-- Second Row with Form Elements -->
+    <div style="padding: 20px;">
+        <div style="border: 1px solid #ccc; padding: 10px;">
+            <h2 style="background-color: #333; text-align: center; color:white;">Payments</h2>
+        <div>
+            <form action="/payment" method="post">
+                <label for="membershipid">membershipid</label>
+                <input type="text" id="membershipid" name="membershipid" required><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" required><br><br>
+
+                <label for="plan">plan:</label>
+                <select id="plan" name="plan">
+                    <option value="plan1">plan 1 (1000 Rs)</option>
+                    <option value="plan2">plan 2 (2000 Rs)</option>
+                    <option value="plan3">plan 3 (3000 Rs)</option>
+                </select><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+            </div>
+            <div class="content" id="content4">
+              
+                <!-- First Row with Text -->
+                <div style="padding: 20px;">
+                    <p>Edit Member</p>
+                </div>
+
+                <form action="/edit_members" method="post">
+                    <label for="membershipid">membershipid</label>
+                    <input type="text" id="membershipid" name="membershipid" required><br><br>
+    
+    
+                    <button type="submit">Search</button>
+                </form>
+            
+                <!-- Second Row with Table -->
+                <div style="padding: 20px;">
+                    <table border="1" cellspacing="0" cellpadding="10" style="width: 100%;">
+                        <tr>
+                            <th>Sl.no</th>
+                            <th>Membership Expiry</th>
+                            <th>Member ID</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>E-mail</th>
+                            <th>Gender</th>
+                            <th>Joining Date</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+            <div class="content" id="content5">
+                  <!-- health status----------------------------------------------->
+ 
+
+    <!-- First Row with Text -->
+    <div style="padding: 20px;">
+        <h2>Health Status</h2>
+    </div>
+
+    <form action="/health_status" method="post">
+        <label for="membershipid">membershipid</label>
+        <input type="text" id="membershipid" name="membershipid" required><br><br>
+
+
+        <button type="submit">Search</button>
+    </form>
+    <!-- Second Row with Table (9 Columns) -->
+    <div style="padding: 20px;">
+        <table border="1" cellspacing="0" cellpadding="10" style="width: 100%;">
+            <tr>
+                <th>Sl.No</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Gender</th>
+                <th>Calorie</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Fat</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+            
+            </tr>
+        </table>
+    </div>
+            </div>
+            <div class="content" id="content6">
+            
+                <!-- First Row with Text -->
+                <div style="padding: 20px;">
+                    <h2>Manage Plan:</h2>
+                </div>
+            
+                <!-- Second Row with Table (7 Columns, 2 Rows) -->
+              
+            
+                <!-- Third Row with Container Box -->
+                <div class="container">
+                    <div class="box">
+                        <h2>Create Plan</h2>
+                        <form action="/create_plan" method="post">
+                       
+                        
+                        <label for="planname">Plan Name:</label>
+                        <input type="text" id="planname" name="planname" required><br><br>
+                        
+                        <label for="plandescription">Plan Description:</label>
+                        <input type="text" id="plandescription" name="plandescription" required><br><br>
+            
+                             
+                        <label for="planvalidity">Plan Validity:</label>
+                        <input type="text" id="planvalidity" name="planvalidity" required><br><br>
+            
+                        <label for="planamount">Plan Amount:</label>
+                        <input type="text" id="planamount" name="planamount" required><br><br>
+            
+            
+                        <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content7">
+                
+            
+                <!-- First Row with Text -->
+                <div style="padding: 20px;">
+                    <p>Overview</p>
+                </div>
+            
+                <!-- Second Row with Form (Year and Month Dropdowns) -->
+                <div style="padding: 20px;">
+                    <form action="/overview" method="post">
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            
+                <!-- Third Row with Table (11 Columns, 2 Rows) -->
+                <div style="padding: 20px;">
+                    <table border="1" cellspacing="0" cellpadding="10" style="width: 100%;">
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>MemberID</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Gender</th>
+                            <th>State</th>
+                            <th>Paid_Date</th>
+                            <th>Expire_Date</th>
+                            <th>Plan_Name</th>
+                            <th>Amount</th>
+                            <th>Validity</th>
+                        </tr>
+                        <tr>
+                            <div>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                            <td>Data 3</td>
+                            <td>Data 4</td>
+                            <td>Data 5</td>
+                            <td>Data 6</td>
+                            <td>Data 7</td>
+                            <td>Data 8</td>
+                            <td>Data 9</td>
+                            <td>Data 10</td>
+                            <td>Data 11</td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Data 12</td>
+                            <td>Data 13</td>
+                            <td>Data 14</td>
+                            <td>Data 15</td>
+                            <td>Data 16</td>
+                            <td>Data 17</td>
+                            <td>Data 18</td>
+                            <td>Data 19</td>
+                            <td>Data 20</td>
+                            <td>Data 21</td>
+                            <td>Data 22</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="content" id="content8">
+                 <!-- Title Bar -->
+   
+
+    <!-- First Row with Text -->
+    <div style="padding: 20px;">
+        <h2>Routine Detail</h2>
+    </div>
+
+    <!-- Second Row with Container Box and Table (6 Rows, 2 Columns) -->
+    <div class="container">
+        <table>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 4, Cell 1</td>
+                <td>Row 4, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 5, Cell 1</td>
+                <td>Row 5, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 6, Cell 1</td>
+                <td>Row 6, Cell 2</td>
+            </tr>
+        </table>
+    </div>
+            </div>
+            <div class="content" id="content9">
+                Content for Menu 9
+            </div>
+            <div class="content" id="content10">
+                Content for Menu 10
+            </div>
+            <!-- Add more content sections as needed -->
+        </div>
+    </div>
+
+    <script>
+            function dashboard_fetch(menuIndex) {
+            // Define the URL of your Spring Boot API endpoint
+
+
+            fetch("/dashboard")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse the response as text
+                    return response.text();
+                })
+                .then(data => {
+                    // Split the string by commas
+                    const parts = data.split(',');
+
+                    // Create a new paragraph element to display each part
+                var i1=document.getElementById("content" + menuIndex+"1")
+                var i2=document.getElementById("content" + menuIndex+"2")
+                var i3=document.getElementById("content" + menuIndex+"3")
+                var i4=document.getElementById("content" + menuIndex+"4")
+                i1.innerHTML=parts[0]
+                i2.innerHTML=parts[1]
+                i3.innerHTML=parts[2]
+                i4.innerHTML=parts[3]
+                })
+              
+        }
+        
+        function showContent(menuIndex) {
+            // Hide all content sections
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            if (menuIndex == 1)
+            {
+                dashboard_fetch(menuIndex);
+
+            }
+            // Show the selected content
+            var selectedContent = document.getElementById('content' + menuIndex);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+
+            // Highlight the active menu item
+            var menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+            menuItems[menuIndex - 1].classList.add('active');
+
+        }
+    </script>
+</body>
+</html>

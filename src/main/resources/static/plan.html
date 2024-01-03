@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title Bar</title>
+    <style>
+        /* CSS to center the container box */
+        .container 
+        {
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Bar -->
+    <div style="background-color: #333; color: white; text-align: center; padding: 10px;">
+        <h1>Title Bar</h1>
+    </div>
+
+    <!-- First Row with Text -->
+    <div style="padding: 20px;">
+        <h2>Manage Plan:</h2>
+    </div>
+
+    <!-- Second Row with Table (7 Columns, 2 Rows) -->
+    <div style="padding: 20px;">
+        <table border="1" cellspacing="0" cellpadding="10" style="width: 100%;">
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+                <th>Column 7</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+            </tr>
+            <tr>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+                <td>Data 13</td>
+                <td>Data 14</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Third Row with Container Box -->
+    <div class="container">
+        <div class="box">
+            <h2>Create Plan</h2>
+            
+            <label for="planid">Plan ID:</label>
+            <input type="text" id="planid" name="planid" required><br><br>
+
+            
+            <label for="planname">Plan Name:</label>
+            <input type="text" id="planname" name="planname" required><br><br>
+            
+            <label for="currentplan">Plan Description:</label>
+            <input type="text" id="plandescription" name="currentplan" required><br><br>
+
+                 
+            <label for="planvalidity">Plan Validity:</label>
+            <input type="text" id="planvalidity" name="planvalidity" required><br><br>
+
+            <label for="planamount">Plan Amount:</label>
+            <input type="text" id="planamount" name="planamount" required><br><br>
+
+
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
